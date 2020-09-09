@@ -1,18 +1,9 @@
-const http = require(req, res)
+const express = require("express")
 
-const express = require('express');
-const app =express();
+const app = express()
 
-const heroesJson = require('./heroes.json')
+const path = require('path')
 
-http.createServer((req, res) => {
-	res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-	
-	// Route System
-	switch (req.url) {
-		// Home
-		case '/':
-            res.end('Home');
-            
-        }
-    }).listen(3030, 'localhost', () => console.log('Server running in 3030 port'));
+app.get("/", function(req, res) {
+    let file
+})
